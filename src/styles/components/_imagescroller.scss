@@ -1,0 +1,23 @@
+.imageScroller {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &__textContainer{
+        position: absolute;
+        z-index: 555;
+        top: $space-m;
+        margin: $margin;
+    }
+}

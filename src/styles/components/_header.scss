@@ -1,0 +1,82 @@
+header {
+  width: 100vw;
+
+  button {
+      display:  none;
+  }
+
+  .headerInfo {
+      height: 4vh;
+      width: 100vw;
+      display: flex;
+      justify-content: flex-end;
+      background-color: $primary;
+
+      menu {
+          display: flex;
+          list-style-type: none;
+          margin: auto 1rem;
+          gap: 1rem;
+
+          li {
+
+            height: 1rem;
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+          }
+      }
+  }
+
+  nav {
+      background-color: $background;
+      position: relative;
+      height: 7vh;
+      width: 100vw;
+
+
+      .logo {
+        position: absolute;
+    }
+
+      ul{
+          display: none;
+          height: 100%;
+          display: flex;
+          gap: 10px;
+          list-style: none;
+          align-items: center;
+
+          @include lg {
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            margin: 0 30px;
+          }
+
+          li a {
+              text-decoration: none;
+              font-family: arial;
+              color: $secondary;
+
+              &:hover {
+                  color: $primary;
+              }
+          }
+      }
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxs;
+
+  span {
+    height: $space-xxs;
+    width: $space-m;
+    background-color: $background;
+    z-index: 10;
+  }
+}

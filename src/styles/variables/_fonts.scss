@@ -1,0 +1,22 @@
+
+
+
+$headline: arial;
+
+h1 {
+    font-family: $headline;
+    font-size: 4rem;
+    color: $white;
+}
+
+h2 {
+    font-family: $headline;
+    font-size: $space-lg;
+    color: $white;
+}
+
+h3 {
+    font-family: $headline;
+    font-size: $space-m;
+    color: $secondary;
+}

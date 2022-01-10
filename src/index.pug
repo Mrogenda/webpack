@@ -1,0 +1,63 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+header
+    div.headerInfo
+        menu(aria-label='Soziale Netzwerke')
+            li.social1
+                a(href='')
+                    img(src=require('./images/svg/facebook.svg'), alt='')
+            li.social2
+                a(href='')
+                    img(src=require('./images/svg/linkedIn.svg'), alt='')
+            li.social3
+                a(href='')
+                    img(src=require('./images/svg/instagram.svg'), alt='')
+    nav
+        a.logo(href='index.html')
+            img(src='', alt='logo')
+        button.burger(aria-expanded='false')
+            span.burgerLine1(aria-hidden='true')
+            span.burgerLine2(aria-hidden='true')
+            span.burgerLine3(aria-hidden='true')
+        ul.navigation__list
+            li
+                a(href='', aria-current='page') Startseite
+            li
+                a(href='') Erste
+            li
+                a(href='') Zweite
+            li
+                a(href='') Dritte
+            li
+                a(href='') Vierte
+main
+    section.imageScroller
+        img(src=require('./images/jpg/bg1.jpg'))
+        div.imageScroller__textContainer
+            h1.pageTitle Page Title
+            h2.pageTitleQuote This is an about text for the page
+    section
+        h3.sectionHeading This is a H3 Heading
+    section
+        h3.sectionHeading This is a H3 Heading
+    section
+        h3.sectionHeading This is a H3 Heading
+    section
+        h3.sectionHeading This is a H3 Heading
+footer
+    section
+    ul
+        li
+            a(href='')
+        li
+            a(href='')
+        li
+            a(href='')
+        li
+            a(href='')
+        li
+            a(href='')

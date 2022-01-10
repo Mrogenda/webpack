@@ -1,0 +1,82 @@
+// Spacing ------------------------------------------
+
+$space: 16px; // = 1em
+
+$border: 3px;
+$space-xxs: 4px;
+$space-xs: 8px;
+$space-s: 12px;
+$space-m: 20px;
+$space-lg: 32px;
+$space-xl: 52px;
+$space-xxl: 84px;
+
+$margin: 30px;
+
+
+
+// bsp mit calc--->      calc(0.25 * var(--space-unit));    // 4px
+
+
+//Breakpoints
+
+// Media-Queries ------------------------------
+
+// minimum
+
+$screen-m-min: 380px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+@mixin m {
+    @media (min-width: #{$screen-m-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+ // Extra large devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+/* use of mixins:
+    @include lg {
+    ......
+}
+*/
+
+
+
+// Grid & Flex ------------------------------
+
+@mixin flex {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: $space;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 15% 70% 15%;
+}
+
+
+/*body {
+    @include flex;
+    @include grid;
+}*/

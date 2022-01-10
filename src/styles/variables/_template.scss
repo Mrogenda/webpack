@@ -1,0 +1,19 @@
+@import '../components/imagescroller';
+
+
+
+main {
+    background-color: $white;
+
+    section {
+        width: 80vw;
+        height: 40vh;
+        background-color: $primary;
+        margin: auto;
+        padding: 20px;
+    }
+}
+
+img {
+    width: 40vw;
+}
