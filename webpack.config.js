@@ -12,7 +12,7 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[name][ext]',
-    clean: true
+    /* clean: true */
   },
   module: {
     rules: [

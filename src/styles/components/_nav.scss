@@ -1,3 +1,61 @@
-body {
-    color: grey;
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $primary;
+    position: relative;
+    height: 7vh;
+    width: 100vw;
+
+
+    .logo {
+      position: absolute;
+      left: $margin-mobile;
+  }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+}
+
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  margin: auto $margin-mobile;
+
+  span {
+    margin: 2px 0;
+    border: 2px solid $background;
+    border-radius: 2px;
+    width: 1.5rem;
+    z-index: 10;
+  }
+}
+
+.navigation__list {
+  display: none;
+
+  @include lg {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin: 0 30px;
+  }
+
+  li a {
+      display: none;
+      text-decoration: none;
+      font-family: arial;
+      color: $secondary;
+
+      &:hover {
+          color: $primary;
+      }
+  }
 }
