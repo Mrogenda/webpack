@@ -1,0 +1,12 @@
+button {
+  &.actionButton {
+    background-color: $highlight;
+    border: none;
+    color: $primary;
+    padding: $space-xs $space-s;
+
+    &:hover {
+      background-color: $highlight-light;
+    }
+  }
+}
