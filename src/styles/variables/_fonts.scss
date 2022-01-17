@@ -18,5 +18,23 @@ h2 {
 h3 {
     font-family: $headline;
     font-size: $space-m;
-    color: $secondary;
+    color: $dark-text;
+}
+
+h4 {
+    font-family: $headline;
+    font-style: bold;
+    font-size: $space;
+    color: $text;
+}
+
+p {
+    font-family: $headline;
+    font-size: $space;
+    color: $text;
+}
+
+button {
+    font-family: $headline;
+    font-size: $space;
 }
