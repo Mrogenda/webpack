@@ -3,7 +3,7 @@ nav {
   justify-content: flex-end;
   background-color: $secondary-light;
   position: relative;
-  height: 10vh;
+  height: 6vh;
   width: 100vw;
 
 
@@ -18,60 +18,34 @@ nav {
   }
 }
 
-
-.burger {
-display: flex;
-flex-direction: column;
-margin: auto $margin-mobile;
-z-index: 10;
-padding-top: 4vh;
-
-  span {
-    margin: 2px 0;
-    border: 2px solid $secondary;
-    border-radius: 2px;
-    width: 1.5rem;
-    z-index: 10;
-  }
-
-  &.active {
-
-    .burgerLine1 {
-      transform: rotate(45deg) translate(6px, 6px);
-    }
-    .burgerLine2 {
-      transform: translate-x(400px);
-      opacity: 0;
-      transition-property: transform;
-      transition: all ease 0.5s;
-    }
-    .burgerLine3 {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-  }
-}
-
 .navigation__list {
     display: none;
     transform: translateX(400px);
     position: absolute;
+    top: 0;
     right: 0;
     width: 50vw;
+    max-width: 400px;
     height: 100vh;
-    background-color: $white;
     transition: transform 1s;
     z-index: 3;
     list-style: none;
+    flex-flow: column nowrap;
+    position: fixed;
+    transform: translateX(110%);
 
   &.active {
     display: block;
-    transform: translateX(0px);
-    transition: transform 1s;
+    transform: translateX(0);
+    transition: transform 1.8s ease-in-out;
+    backdrop-filter: blur(6px) grayscale(.6);
+    background-color: rgb(255 255 255 / 0%);
+    z-index: 99;
   }
 
   @include lg {
-    height: 100%;
     display: flex;
+    height: 100%;
     gap: 10px;
     list-style: none;
     align-items: center;
@@ -80,13 +54,24 @@ padding-top: 4vh;
     margin: 0 30px;
   }
 
+  > ul {
+    list-style: none;
+    margin: 80px;
+
+    li {
+        margin: $space-m 0;
+      }
+  }
+
   li a {
       text-decoration: none;
       font-family: arial;
       color: $secondary;
+      cursor: alias;
 
       &:hover {
           color: $primary;
       }
   }
 }
+

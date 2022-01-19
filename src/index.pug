@@ -1,55 +1,45 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible', content='IE=edge')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  title Document
-body
-  header
-    nav
+html(lang='de')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+  body
+    header
       div.headerInfo
-          ul(aria-label='Soziale Netzwerke')
-              li.social1
-                  a(href='')
-                      img(src=require('./images/svg/facebook.svg'), alt='facebook logo')
-              li.social2
-                  a(href='')
-                      img(src=require('./images/svg/linkedIn.svg'), alt='linkedIn logo')
-              li.social3
-                  a(href='')
-                      img(src=require('./images/svg/instagram.svg'), alt='instagram logo')
+        include includes/socialIcons.pug
       a.logo(href='index.html')
-          img(src=src=require('./images/svg/logo.svg'), alt='logo')
-      button.burger(aria-expanded='false')
-          span.burgerLine1(aria-hidden='true')
-          span.burgerLine2(aria-hidden='true')
-          span.burgerLine3(aria-hidden='true')
-      ul.navigation__list
-          li
-              a(href='', aria-current='page') Startseite
-          li
-              a(href='') Erste
-          li
-              a(href='') Zweite
-          li
-              a(href='') Dritte
-          li
-              a(href='') Vierte
-  main
-    section.imageScroller
-      img(src=require('./images/jpg/bg1.jpg'))
-      div.imageScroller__textContainer
-          h1.pageTitle Page Title
-          h2.pageTitleQuote This is an about text for the page
-    section
-      h3.sectionHeading This is a H3 Heading
-      h4 This is a H4 Heading
-      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti deserunt id neque nemo, dignissimos provident, fuga minima nisi recusandae mollitia tempore natus hic ullam doloremque non blanditiis itaque officiis nam!
-      button.actionButton Jetzt Klicken
-    section
-      h3.sectionHeading This is a H3 Heading
-    section
-      h3.sectionHeading This is a H3 Heading
-    section
-      h3.sectionHeading This is a H3 Heading
-  include includes/footer.pug
+        img(src=src=require('./images/svg/logo.svg'), alt='logo')
+      nav
+        include includes/burger.pug
+        ul.navigation__list
+            li
+                a(href='', aria-current='page') Startseite
+            li
+                a(href='') Erste
+            li
+                a(href='') Zweite
+            li
+                a(href='') Dritte
+            li
+                a(href='') Vierte
+    main
+      section.imageScroller
+        img(src=require('./images/jpg/bg1.jpg'), alt='headerImage')
+        div.imageScroller__textContainer
+            h1.pageTitle Page Title
+            h2.pageTitleQuote This is an about text for the page
+      section
+        h3.sectionHeading This is a H3 Heading
+        h4 This is a H4 Heading
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti deserunt id neque nemo, dignissimos provident, fuga minima nisi recusandae mollitia tempore natus hic ullam doloremque non blanditiis itaque officiis nam!
+        button.actionButton Jetzt Klicken
+      section
+        h3.sectionHeading This is a H3 Heading
+      section
+        h3.sectionHeading This is a H3 Heading
+      section
+        h3.sectionHeading This is a H3 Heading
+        include includes/form.pug
+    include includes/footer.pug

@@ -7,6 +7,7 @@ const { extendDefaultPlugins } = require("svgo");
 const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
+
   mode: env,
   entry: './src/index.js',
   output: {
@@ -15,7 +16,17 @@ module.exports = {
     assetModuleFilename: 'images/[name][ext]',
     /* clean: true */
   },
+
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.pug",
+      minify: false
+    }),
+  ],
+
   module: {
+
     rules: [
       {
         test: /\.s[ac]ss$/,
@@ -25,6 +36,7 @@ module.exports = {
           'sass-loader'
         ],
       },
+
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -35,20 +47,25 @@ module.exports = {
           }
         }
       },
+
       {
         test: /\.pug$/,
-        use: [
+        use:
           {
-            loader: "pug-loader",
-          }
-        ]
+              loader: 'pug-loader',
+              options: {
+                pretty: true,
+              },
+          },
       },
+
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: 'asset/resource'
       }
     ]
   },
+
   optimization: {
     minimizer: [
       "...",
@@ -82,10 +99,4 @@ module.exports = {
       }),
     ],
   },
-  plugins: [
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.pug"
-    }),
-  ],
 }

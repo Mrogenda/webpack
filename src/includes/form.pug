@@ -1,0 +1,46 @@
+form(action="action.php")
+  ul
+    li
+      div
+        input(type="radio" id="herr" name="anrede" value="Herr" checked)
+        label(for="herr") Herr
+      div
+        input(type="radio" id="frau" name="anrede" value="Frau" )
+        label(for="frau") Frau
+      div
+        input(type="radio" id="none" name="anrede" value="none" )
+        label(for="none") Keine Angabe
+    li.wrap
+      label(for="Vorname") Vorname
+      input(input type="text" name="Vorname" size="55" maxlength="255" value="" placeholder="Vorname")
+    li.wrap
+      label(for="Vorname") Nachname
+      input(input type="text" name="Nachname" size="55" maxlength="255" value="" placeholder="Nachname")
+    li.wrap
+      input(type="email" name="email" size="55" maxlength="255" value="" placeholder="email" multiple required)
+      label(for="")
+    li
+      input(type="tel" name="tel" id="tel" size="55" maxlength="100" value="" required)
+      label(for="")
+    li
+      input(type="textarea")
+      label(for="")
+    li
+      label(for="Newsletter") Newsletter abbonieren?
+      input(type="checkbox" name="newsletter" id="newsletter")
+    li
+      label(for="AGB") AGB gelesen und akzeptiert
+      input(type="checkbox" name="AGB" id="AGB")
+    li
+      div
+        input(type="radio" id="radio1" name="radioName" value="radio1" checked)
+        label(for="radio1") radio1
+      div
+        input(type="radio" id="radio2" name="radioName" value="radio2" )
+        label(for="radio2") radio2
+    li
+      label(for="")
+      textarea(name="", cols="50", rows="4")
+    li
+      input(type="button", value="click", class="actionButton")
+      input(type="reset" value="reset", class="actionButton")
