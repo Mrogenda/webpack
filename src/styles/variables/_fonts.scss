@@ -2,6 +2,7 @@
 
 
 $headline: arial;
+$text: arial, sans-serif;
 
 h1 {
     font-family: $headline;
@@ -29,12 +30,12 @@ h4 {
 }
 
 p {
-    font-family: $headline;
+    font-family: $text;
     font-size: $space;
     color: $text;
 }
 
 button {
-    font-family: $headline;
+    font-family: $text;
     font-size: $space;
 }

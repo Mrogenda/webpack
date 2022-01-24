@@ -6,6 +6,9 @@ input[type=reset] {
     border: none;
     color: $primary;
     padding: $space-xs $space-s;
+    min-width: $space-xxl;
+    font-size: $text;
+    border-radius: 30px;
 
     &:hover {
       background-color: $highlight-light;

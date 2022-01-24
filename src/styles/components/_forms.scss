@@ -1,10 +1,247 @@
+.formSection {
+  background-color: $light-text;
+  padding: 0;
+  width: 100%;
+
+  h3 {
+    width: 80vw;
+    margin: auto;
+    padding-top: $margin-mobile;
+  }
+}
+
 form {
+//  background-color: $white;
+  box-sizing: border-box;
+  width: 80vw;
+  margin: auto;
+  font-family: $text;
+  color: $text-color;
+  padding: $margin-mobile;
+
   ul {
     list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+
+    @include lg {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
     li {
       display: flex;
       flex-flow: row nowrap;
+      width: 100%;
+      margin: 6px 0;
+
+      .radio {
+        margin-right: $space-xs;
+      }
+
+      .button {
+        margin-right: $space-s;
+      }
     }
   }
 
+  .wrap {
+    flex-flow: column wrap;
+
+    @include lg{
+      width: 49%;
+    }
+
+  }
+
+
+  input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    border: 1px solid $secondary;
+    vertical-align: -1px;
+    outline: none;
+    appearance: none;
+  }
+
+  input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 7px;
+    height: 7px;
+    border-radius: 6px;
+    background-color: $secondary;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+    margin: -2px;
+    padding: 1px;
+  }
+
+  input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+  }
+
+  input[type="text"],
+  textarea,
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"] {
+  background: $white;
+  border: 1px solid $secondary-light;
+  padding: $space-xxs;
+  margin: $space-xxs 0 $space-xxs 0;
+  }
+
+  input[type="checkbox"] {
+    margin-left: $space;
+  }
+
 }
+
+
+
+
+/* 
+
+
+
+
+.wrap {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+
+form{
+  grid-row: 2 / 4;
+  grid-column: 5 / 6;
+  font-family: $text;
+  color: $text;
+  overflow-y: scroll;
+  width: max-content;
+  z-index: 60;
+  margin-left: 100px;
+}
+
+ul {
+  list-style: none;
+  margin: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0 40px;
+}
+
+h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2.5em;
+  margin: auto;
+  padding: 20px 0;
+}
+
+label {
+  margin-right: 8px;
+}
+
+input {
+  color: rgb(0, 34, 31);
+  padding-left: 20px;
+  font-weight: 400;
+  margin: 5px 0 20px 0;
+}
+
+.input__radio {
+  margin: 15px 0;
+}
+
+input[type="radio"] {
+  margin: 0 5px 0 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(99, 2, 99);
+  vertical-align: -1px;
+  outline: none;
+  appearance: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 7px;
+  height: 7px;
+  border-radius: 6px;
+  background-color: rgb(139, 3, 112);
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+  margin: -2px;
+  padding: 1px;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+input[type="text"],
+textarea,
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+  background: none;
+  border: 1px solid #f9e4f2;
+  padding: 8px;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 10px 0;
+  box-sizing: border-box;
+  width: 150px;
+  padding: 5px;
+  height: 40px;
+  background: rgb(126, 8, 80);
+  border: 5px solid rgb(126, 8, 80);
+  border-radius: 25px;
+  border: none;
+  color: white;
+}
+
+
+select,
+input[type="date"],
+input[type="color"] {
+  margin: 10px 0 20px 0;
+  border: 5px solid rgb(126, 8, 80);
+  border-radius: 25px;
+  background: rgb(126, 8, 80);
+  color: white;
+  padding: 5px;
+  max-width: 130px;
+}
+
+input[type="color"] {
+  border: 0px;
+  border-radius: 0;
+}
+
+fieldset {
+  border: 1px solid rgba(238, 200, 234, 0.616);
+  width: max-content;
+  margin: 30px 0;
+}
+
+ */
