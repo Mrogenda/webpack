@@ -43,6 +43,10 @@
     top: 11px;
   }
 
+  &.active {
+    position: fixed;
+  }
+
   @include lg {
     display: none;
   }

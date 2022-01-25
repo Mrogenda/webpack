@@ -1,0 +1,44 @@
+.blockSection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: $gap;
+  padding: 0 $margin-mobile;
+
+  @include xl {
+    margin: 0 10%;
+  }
+}
+
+.contentBox {
+  width: 100%;
+  background-color: $white;
+  margin: $space-s 0;
+
+  @include m {
+    width: 49%;
+  }
+
+  @include lg {
+    width: 32%
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  h4 {
+    border-left: 3px solid $highlight;
+    padding: $space-s;
+    padding-left: $margin-mobile;
+    margin: 0;
+  }
+
+  p, button {
+    margin: $margin-mobile;
+  }
+}

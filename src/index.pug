@@ -10,7 +10,7 @@ html(lang='de')
       div.headerInfo
         include includes/socialIcons.pug
       a.logo(href='index.html')
-        img(src=src=require('./images/svg/logo.svg'), alt='logo')
+        img(src=require('./images/svg/logo.svg'), alt='logo')
       nav
         include includes/burger.pug
         ul.navigation__list
@@ -37,6 +37,10 @@ html(lang='de')
         button.actionButton Jetzt Klicken
       section
         h3.sectionHeading This is a H3 Heading
+        div.blockSection
+          include includes/contentBox.pug
+          include includes/contentBox.pug
+          include includes/contentBox.pug
       section
         h3.sectionHeading This is a H3 Heading
       section.formSection

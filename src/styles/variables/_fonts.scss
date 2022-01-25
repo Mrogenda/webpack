@@ -26,16 +26,24 @@ h4 {
     font-family: $headline;
     font-weight: bold;
     font-size: $space;
-    color: $text;
+    color: $text-color;
 }
 
 p {
     font-family: $text;
     font-size: $space;
-    color: $text;
+    color: $text-color;
 }
 
 button {
     font-family: $text;
     font-size: $space;
+}
+
+a {
+  text-decoration: none;
+  font-family: $text;
+  font-size: $space;
+  color: $text-color;
+  cursor: pointer;
 }

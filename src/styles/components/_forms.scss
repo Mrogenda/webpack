@@ -1,23 +1,30 @@
 .formSection {
   background-color: $light-text;
-  padding: 0;
+  padding: $margin-mobile 0;
   width: 100%;
 
   h3 {
-    width: 80vw;
     margin: auto;
-    padding-top: $margin-mobile;
+    padding: $margin-mobile;
+
+    @include xl {
+      padding-left: 10%;
+    }
   }
 }
 
 form {
 //  background-color: $white;
   box-sizing: border-box;
-  width: 80vw;
-  margin: auto;
+  margin: 0 $margin-mobile;
   font-family: $text;
   color: $text-color;
-  padding: $margin-mobile;
+  padding: $space-xs;
+
+  @include xl {
+    margin: 0 10%;
+    padding: $space-xs 0;
+  }
 
   ul {
     list-style: none;
@@ -36,11 +43,13 @@ form {
       margin: 6px 0;
 
       .radio {
-        margin-right: $space-xs;
+        margin: $space-s;
+        margin-left: 0;
       }
 
       .button {
-        margin-right: $space-s;
+        margin: $space;
+        margin-left: 0;
       }
     }
   }
@@ -91,9 +100,9 @@ form {
   input[type="number"],
   input[type="tel"] {
   background: $white;
-  border: 1px solid $secondary-light;
-  padding: $space-xxs;
-  margin: $space-xxs 0 $space-xxs 0;
+  border: none;
+  padding: $space-s;
+  margin: $space-s 0;
   }
 
   input[type="checkbox"] {

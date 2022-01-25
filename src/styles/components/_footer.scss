@@ -1,5 +1,72 @@
-footer {
-  height: 30vh;
-    width: 100vw;
-    background: $secondary-light;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  padding: $margin-mobile 10%;
+  background: $secondary-light;
+  gap: $space-lg;
+
+  @include lg {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+
+    @include lg {
+      order: 2;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 30px;
+      width: 50%;
+    }
+
+    li a {
+      color: $white;
+      font-size: $space-m
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+
+  p {
+    color: $white;
+    margin: 0;
+
+    @include lg{
+      order: 5;
+    }
+  }
+
+  .socialIconsContainer {
+    height: 4vh;
+    width: 100%;
+
+    @include lg {
+      order: 1;
+      width: 40%;
+      justify-self: start;
+      justify-content: start;
+      margin: auto 0;
+    }
+
+    .socialIcons {
+      flex-direction: row;
+
+      @include lg {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
+      }
+    }
+  }
 }

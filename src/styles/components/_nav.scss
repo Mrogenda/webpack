@@ -4,7 +4,7 @@ nav {
   background-color: $secondary-light;
   position: relative;
   height: 6vh;
-  width: 100vw;
+  width: 100%;
 
 
   .logo {
@@ -20,7 +20,7 @@ nav {
 
 .navigation__list {
     display: none;
-    transform: translateX(400px);
+    transform: translateX(110%);
     position: absolute;
     top: 0;
     right: 0;
@@ -31,27 +31,39 @@ nav {
     z-index: 3;
     list-style: none;
     flex-flow: column nowrap;
-    position: fixed;
-    transform: translateX(110%);
 
   &.active {
     display: block;
     transform: translateX(0);
     transition: transform 1.8s ease-in-out;
     backdrop-filter: blur(6px) grayscale(.6);
-    background-color: rgb(255 255 255 / 0%);
+    background-color: rgba(128, 133, 129, 0.7);
     z-index: 99;
+    overflow: hidden;
+    position: fixed;
+    padding: $margin-mobile;
+
+      li {
+        padding: $space;
+
+        a {
+          color: $white;
+          font-weight: bold;
+          font-size: $space-m
+        }
+      }
   }
 
   @include lg {
     display: flex;
-    height: 100%;
-    gap: 10px;
-    list-style: none;
-    align-items: center;
-    flex-flow: row nowrap;
+    transform: translateX(0);
+    flex-direction: row;
     justify-content: flex-end;
-    margin: 0 30px;
+    gap: $space-lg;
+    align-items: center;
+    height: 100%;
+    margin: auto $margin-desktop;
+    width: 100%;
   }
 
   > ul {
@@ -67,10 +79,15 @@ nav {
       text-decoration: none;
       font-family: arial;
       color: $secondary;
-      cursor: alias;
+      cursor: pointer;
 
       &:hover {
+
+        @include lg {
           color: $primary;
+          padding-bottom: 2vh;
+          border-bottom: 2px solid $primary;
+        }
       }
   }
 }

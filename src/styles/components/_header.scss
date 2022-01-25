@@ -1,7 +1,7 @@
 @import 'nav';
 
 header {
-  width: 100vw;
+  width: 100%;
 
   .logo {
     fill: white;
@@ -21,27 +21,26 @@ header {
 
   .headerInfo {
       height: 4vh;
-      width: 100vw;
+      width: 100%;
       display: flex;
       justify-content: flex-end;
       background-color: $secondary;
-
-      ul {
-          display: flex;
-          list-style-type: none;
-          margin: auto 1rem;
-          gap: 1rem;
-
-          li {
-
-            height: 1rem;
-
-            img {
-              width: 16px;
-              height: 16px;
-            }
-          }
-      }
   }
 }
 
+.socialIcons {
+  display: flex;
+  list-style-type: none;
+  margin: auto $margin-mobile;
+  gap: 1rem;
+
+  li {
+
+    height: 1rem;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
